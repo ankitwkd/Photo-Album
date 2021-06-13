@@ -26,8 +26,8 @@ public class LowerFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private Button nextBtn;
-    private Button prevBtn;
+    public Button nextBtn;
+    public Button prevBtn;
 
     public LowerFragment() {
         // Required empty public constructor
@@ -69,14 +69,12 @@ public class LowerFragment extends Fragment {
         nextBtn = view.findViewById(R.id.nextButton);
         prevBtn = view.findViewById(R.id.prevButton);
 
-
-
         nextBtn.setOnClickListener(v ->
-                ((MainActivity)getActivity()).nextImage()
-        );
+                ((MainActivity)getActivity()).nextImage());
 
         prevBtn.setOnClickListener(v ->
                 ((MainActivity)getActivity()).prevImage());
+        prevBtn.setClickable(false);
         return view;
     }
 }

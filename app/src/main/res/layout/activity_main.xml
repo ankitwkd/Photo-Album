@@ -17,7 +17,6 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView3"
-        android:name="com.example.photoalbum.UpperFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/green"
@@ -28,7 +27,6 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView4"
-        android:name="com.example.photoalbum.LowerFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/black"

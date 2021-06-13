@@ -33,4 +33,25 @@ public class MainActivity extends AppCompatActivity {
     public void prevImage(){
         upperFragment.prevImage();
     }
+
+    public void enableBtn(String buttonType){
+        if(buttonType.equalsIgnoreCase("Next")){
+            lowerFragment.nextBtn.setClickable(true);
+            lowerFragment.nextBtn.setAlpha(1);
+        }else if(buttonType.equalsIgnoreCase("Prev")){
+            lowerFragment.prevBtn.setClickable(true);
+            lowerFragment.prevBtn.setAlpha(1);
+        }
+    }
+
+    public void disableBtn(String buttonType){
+        if(buttonType.equalsIgnoreCase("Next")){
+            lowerFragment.nextBtn.setClickable(false);
+            lowerFragment.nextBtn.setAlpha(.5f);
+        }else if(buttonType.equalsIgnoreCase("Prev")){
+            lowerFragment.prevBtn.setClickable(false);
+            lowerFragment.prevBtn.setAlpha(.5f);
+
+        }
+    }
 }
