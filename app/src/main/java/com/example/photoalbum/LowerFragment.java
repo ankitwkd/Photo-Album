@@ -86,11 +86,11 @@ public class LowerFragment extends Fragment {
 
 
         nextBtn.setOnClickListener(v ->
-                ((MainActivity) getActivity()).nextImage()
-        );
+                ((MainActivity)getActivity()).nextImage());
 
         prevBtn.setOnClickListener(v ->
-                ((MainActivity) getActivity()).prevImage());
+                ((MainActivity)getActivity()).prevImage());
+        prevBtn.setClickable(false);
         return view;
     }
 }

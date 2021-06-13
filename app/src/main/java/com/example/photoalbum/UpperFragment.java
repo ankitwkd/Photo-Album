@@ -30,6 +30,8 @@ public class UpperFragment extends Fragment {
     private String mParam2;
 
     private ImageView animalImage;
+    private boolean nextEnabled = true;
+    private boolean prevEnabled = false;
 
     public UpperFragment() {
         // Required empty public constructor
@@ -75,10 +77,27 @@ public class UpperFragment extends Fragment {
     public void nextImage() {
         currentIndex = currentIndex + 1;
         animalImage.setImageResource(imageSources[currentIndex]);
+        if(currentIndex == 5){
+            ((MainActivity)getActivity()).disableBtn("Next");
+            nextEnabled = false;
+        }
+        if(!prevEnabled){
+            ((MainActivity)getActivity()).enableBtn("Prev");
+            prevEnabled = true;
+        }
+
     }
 
     public void prevImage() {
         currentIndex = currentIndex - 1;
         animalImage.setImageResource(imageSources[currentIndex]);
+        if(!nextEnabled){
+            ((MainActivity)getActivity()).enableBtn("Next");
+            nextEnabled = true;
+        }
+        if(currentIndex == 0){
+            ((MainActivity)getActivity()).disableBtn("Prev");
+            prevEnabled = false;
+        }
     }
 }
