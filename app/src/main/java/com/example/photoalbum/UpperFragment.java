@@ -72,12 +72,12 @@ public class UpperFragment extends Fragment {
         return view;
     }
 
-    public void nextImage(){
+    public void nextImage() {
         currentIndex = currentIndex + 1;
         animalImage.setImageResource(imageSources[currentIndex]);
     }
 
-    public void prevImage(){
+    public void prevImage() {
         currentIndex = currentIndex - 1;
         animalImage.setImageResource(imageSources[currentIndex]);
     }
