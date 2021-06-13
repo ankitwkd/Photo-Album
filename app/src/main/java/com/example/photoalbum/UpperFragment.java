@@ -68,16 +68,17 @@ public class UpperFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_upper, container, false);
         animalImage = view.findViewById(R.id.imageView);
+        animalImage.setImageResource(imageSources[currentIndex]);
         return view;
     }
 
     public void nextImage(){
         currentIndex = currentIndex + 1;
-        animalImage.setImageDrawable(getResources().getDrawable(imageSources[currentIndex]));
+        animalImage.setImageResource(imageSources[currentIndex]);
     }
 
     public void prevImage(){
         currentIndex = currentIndex - 1;
-        animalImage.setImageDrawable(getResources().getDrawable( imageSources[currentIndex]));
+        animalImage.setImageResource(imageSources[currentIndex]);
     }
 }
