@@ -28,8 +28,8 @@ public class LowerFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private Button nextBtn;
-    private Button prevBtn;
+    public Button nextBtn;
+    public Button prevBtn;
     private CheckBox enableSlideShow;
 
     public LowerFragment() {
@@ -86,10 +86,10 @@ public class LowerFragment extends Fragment {
 
 
         nextBtn.setOnClickListener(v ->
-                ((MainActivity)getActivity()).nextImage());
+                ((MainActivity) getActivity()).nextImage());
 
         prevBtn.setOnClickListener(v ->
-                ((MainActivity)getActivity()).prevImage());
+                ((MainActivity) getActivity()).prevImage());
         prevBtn.setClickable(false);
         return view;
     }
